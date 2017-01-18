@@ -1,6 +1,6 @@
 // Business logic
 
-var test = "quqqarrt";
+var test = "hello this is a nice day";
 
 var isVowel = function(letter){
   var vowels = ["a","e","i","o","u","y"];
@@ -42,4 +42,18 @@ var pigTranslate = function(input){
     return input;
 };
 
-alert(pigTranslate(test));
+// alert(pigTranslate(test));
+
+// Front-end logic
+
+$(document).ready(function() {
+  $("#pig-form").submit(function(event) {
+    event.preventDefault();
+
+    var usrInput = $("#user-text").val();
+
+    $(".results").text(pigTranslate(usrInput));
+
+  });
+
+});
