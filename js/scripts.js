@@ -42,17 +42,20 @@ var pigTranslate = function(input){
     return input;
 };
 
-// alert(pigTranslate(test));
 
 // Front-end logic
 
 $(document).ready(function() {
   $("#pig-form").submit(function(event) {
     event.preventDefault();
-
+    $(".results").text(" ");
     var usrInput = $("#user-text").val();
+    var usrInputArray = usrInput.split(" ");
 
-    $(".results").text(pigTranslate(usrInput));
+
+    usrInputArray.forEach(function (input) {
+      $(".results").append(pigTranslate(input)+" ");
+    });
 
   });
 
