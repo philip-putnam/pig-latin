@@ -29,7 +29,8 @@ var moveCons = function(string) {
 };
 
 var pigTranslate = function(input){
-  if (input.match(/[^a-z]/g) === null) {
+  if (input.match(/[^a-z]/ig) === null) {
+    input = input.toLowerCase();
     if (input.charAt(0) === 'y') {
       var input = input.slice(1, input.length) + "y";
     }
