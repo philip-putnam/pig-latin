@@ -1,11 +1,16 @@
 // Business logic
 
-var regMovConst = function(input){
-  var subStr = input.match(/[aeiouy].*/i) + input.match(/[^aeiouy]*/i) + "ay";
+var regMovConst = function(input) {
+  var subStr = "";
+  if (input.match(/y/i) !== null) {
+    input = input.slice(1) + input.match(/y/i);
+  }
+  subStr = input.match(/[aeiouy].*/i) + input.match(/[^aeiouy]*/i) + "ay";
   return subStr;
 };
 
-alert(regMovConst("shoreditch"));
+
+alert(regMovConst("ybbba"));
 
 var isVowel = function(letter){
   var vowels = ["a","e","i","o","u","y"];
