@@ -13,7 +13,7 @@ _This tool takes a text input and translates into pig latin._
 ####  Example input:
 ####  Example output:
 
-####Does nothing non alphabetical input
+####Does nothing to non-alphabetical input
 ####  Example input: 21
 ####  Example output: 21
 
