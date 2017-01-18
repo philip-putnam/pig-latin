@@ -33,7 +33,7 @@ _This tool takes a text input and translates into pig latin._
 ####  Example input: you
 ####  Example output: ouyay
 
-####If beginning consonants contain 'qu' move these to the end and add 'ay'
+####If beginning consonants contain 'qu' move the u as though it were a consonant.
 ####  Example input: squeal
 ####  Example output: ealsquay
 
