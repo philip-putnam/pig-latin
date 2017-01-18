@@ -1,7 +1,6 @@
 // Business logic
 
-
-var test = "u";
+var test = "idol";
 
 var isVowel = function(letter){
   var vowels = ["a","e","i","o","u"];
@@ -14,9 +13,8 @@ var isVowel = function(letter){
   return vowelTrue;
 };
 
-
 var pigTranslate = function(input){
-  if (isVowel(input)) {
+  if (isVowel(input.charAt(0))) {
     input = input + "ay";
   }
     return input;
