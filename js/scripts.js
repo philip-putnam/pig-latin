@@ -1,6 +1,11 @@
 // Business logic
 
-var test = "hello this is a nice day";
+var regMovConst = function(input){
+  var subStr = input.match(/[aeiouy].*/i) + input.match(/[^aeiouy]*/i) + "ay";
+  return subStr;
+};
+
+alert(regMovConst("shoreditch"));
 
 var isVowel = function(letter){
   var vowels = ["a","e","i","o","u","y"];
@@ -42,7 +47,6 @@ var pigTranslate = function(input){
 
     return input;
 };
-
 
 // Front-end logic
 
