@@ -1,9 +1,9 @@
 // Business logic
 
-var test = "standard";
+var test = "you";
 
 var isVowel = function(letter){
-  var vowels = ["a","e","i","o","u"];
+  var vowels = ["a","e","i","o","u","y"];
   var vowelTrue = false;
   vowels.forEach(function(vowel) {
     if (letter === vowel) {
@@ -26,6 +26,9 @@ var moveCons = function(string) {
 
 var pigTranslate = function(input){
   if (input.match(/[^a-z]/g) === null) {
+    if (input.charAt(0) === 'y') {
+      var input = input.slice(1, input.length) + "y";
+    }
     if (!isVowel(input.charAt(0))) {
       input = moveCons(input);
     }
