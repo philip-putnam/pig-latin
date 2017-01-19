@@ -11,7 +11,6 @@ var regMovConst = function(input) {
   return subStr;
 };
 
-
 alert(regMovConst("queen"));
 
 var isVowel = function(letter){
