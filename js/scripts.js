@@ -2,15 +2,17 @@
 
 var regMovConst = function(input) {
   var subStr = "";
-  if (input.match(/y/i) !== null) {
+  if (input.match(/^y/i) !== null) {
     input = input.slice(1) + input.match(/y/i);
+  } else if (input.match(/[aeiouy]+.*q(?=u)/i) === null) {
+    input = input.slice(input.search(/u/i) + 1) + input.slice(0, input.search(/u/i) + 1);
   }
   subStr = input.match(/[aeiouy].*/i) + input.match(/[^aeiouy]*/i) + "ay";
   return subStr;
 };
 
 
-alert(regMovConst("ybbba"));
+alert(regMovConst("queen"));
 
 var isVowel = function(letter){
   var vowels = ["a","e","i","o","u","y"];
